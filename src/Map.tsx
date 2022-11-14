@@ -58,7 +58,7 @@ function Star(props: any) {
             <div>
                 <Stars selected={true} />
                 <Stars selected={true} />
-                <Stars selected={true} />
+                <Stars selected={false} />
                 <Stars selected={false} />
                 <Stars selected={false} />
             </div>
