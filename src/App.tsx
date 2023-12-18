@@ -5,7 +5,7 @@ function App() {
     console.log('App rendering')
     return (
         <div>
-            123
+            12345
             <Rating/>
         </div>
     );
