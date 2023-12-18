@@ -1,40 +1,55 @@
 import React from 'react';
 import './App.css';
-import Map from "./Map";
-import {Fragment as Frag} from "./Fragment";
 
 function App() {
+    console.log('App rendering')
     return (
         <div>
-            <Frag/>
-            <input/>
+            123
             <Rating/>
-            <Map/>
         </div>
     );
 }
 
-function RatingTitle() {
-    return (
-        <div>
-            <h3>Top100</h3>
-        </div>
-    );
-}function RatingBody() {
-    return (
-        <div>
-            <ul>1</ul>
-            <ul>2</ul>
-            <ul>3</ul>
-        </div>
-    );
-}
 function Rating() {
+    console.log('Rating rendering')
     return (
         <div>
             <RatingTitle/>
+            <Star/>
             <RatingBody/>
         </div>
-        )
+    )
 }
+
 export default App;
+
+function Star() {
+    console.log('Star rendering')
+    debugger
+    return (
+        <div>
+            <div>STAR</div>
+            <div>STAR</div>
+            <div>STAR</div>
+            <div>STAR</div>
+            <div>STAR</div>
+        </div>
+    )
+}
+
+function RatingTitle() {
+    console.log('RatingTitle rendering')
+    return <>Rating Title</>
+}
+
+function RatingBody() {
+    console.log('RatingBody rendering')
+    return (
+        <div>
+            Body1
+            Body2
+            Body3
+        </div>
+    )
+}
