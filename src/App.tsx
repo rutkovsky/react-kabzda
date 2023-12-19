@@ -1,55 +1,19 @@
 import React from 'react';
 import './App.css';
+import Rating from './components/Rating/Rating';
+import Accordion from './components/Accordion/Accordion';
 
 function App() {
     console.log('App rendering')
     return (
         <div>
-            12345
-            <Rating/>
+            <Rating stars={0} title={'Title 1'}/>
+            <Rating stars={1} title={'Title 2'}/>
+            <Rating stars={3} title={'Title 3'}/>
+            <Accordion colapsed = {false}/>
+            <Accordion colapsed = {true}/>
         </div>
     );
 }
 
-function Rating() {
-    console.log('Rating rendering')
-    return (
-        <div>
-            <RatingTitle/>
-            <Star/>
-            <RatingBody/>
-        </div>
-    )
-}
-
 export default App;
-
-function Star() {
-    console.log('Star rendering')
-    debugger
-    return (
-        <div>
-            <div>STAR</div>
-            <div>STAR</div>
-            <div>STAR</div>
-            <div>STAR</div>
-            <div>STAR</div>
-        </div>
-    )
-}
-
-function RatingTitle() {
-    console.log('RatingTitle rendering')
-    return <>Rating Title</>
-}
-
-function RatingBody() {
-    console.log('RatingBody rendering')
-    return (
-        <div>
-            Body1
-            Body2
-            Body3
-        </div>
-    )
-}
