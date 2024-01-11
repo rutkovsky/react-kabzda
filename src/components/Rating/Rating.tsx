@@ -1,47 +1,150 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Star from './Star';
 
 type RatingPropsType = {
-    stars: number;
     title: string;
 }
 
 function Rating(props: RatingPropsType) {
-    console.log('Rating rendering')
-    if (props.stars === 1) return <div>
+
+    let [stars, setStars] = useState(1);
+
+    if (stars === 1) return <div>
         <RatingTitle title1={props.title}/>
+        <button onClick={() => {
+            setStars(1)
+        }}>1
+        </button>
+        <button onClick={() => {
+            setStars(2)
+        }}>2
+        </button>
+        <button onClick={() => {
+            setStars(3)
+        }}>3
+        </button>
+        <button onClick={() => {
+            setStars(4)
+        }}>4
+        </button>
+        <button onClick={() => {
+            setStars(5)
+        }}>5
+        </button>
+        <div>
+            <Star selected={true}/>
+            <Star selected={false}/>
+            <Star selected={false}/>
+            <Star selected={false}/>
+            <Star selected={false}/>
+        </div>
+    </div>
+    if (stars === 2) return <div>
+        <RatingTitle title1={props.title}/>
+        <button onClick={() => {
+            setStars(1)
+        }}>1
+        </button>
+        <button onClick={() => {
+            setStars(2)
+        }}>2
+        </button>
+        <button onClick={() => {
+            setStars(3)
+        }}>3
+        </button>
+        <button onClick={() => {
+            setStars(4)
+        }}>4
+        </button>
+        <button onClick={() => {
+            setStars(5)
+        }}>5
+        </button>
         <Star selected={true}/>
-        <Star selected={false}/>
+        <Star selected={true}/>
         <Star selected={false}/>
         <Star selected={false}/>
         <Star selected={false}/>
     </div>
-    if (props.stars === 2) return <div>
+    if (stars === 3) return <div>
         <RatingTitle title1={props.title}/>
+        <button onClick={() => {
+            setStars(1)
+        }}>1
+        </button>
+        <button onClick={() => {
+            setStars(2)
+        }}>2
+        </button>
+        <button onClick={() => {
+            setStars(3)
+        }}>3
+        </button>
+        <button onClick={() => {
+            setStars(4)
+        }}>4
+        </button>
+        <button onClick={() => {
+            setStars(5)
+        }}>5
+        </button>
         <Star selected={true}/>
         <Star selected={true}/>
-        <Star selected={false}/>
+        <Star selected={true}/>
         <Star selected={false}/>
         <Star selected={false}/>
     </div>
-    if (props.stars === 3) return <div>
+    if (stars === 4) return <div>
         <RatingTitle title1={props.title}/>
+        <button onClick={() => {
+            setStars(1)
+        }}>1
+        </button>
+        <button onClick={() => {
+            setStars(2)
+        }}>2
+        </button>
+        <button onClick={() => {
+            setStars(3)
+        }}>3
+        </button>
+        <button onClick={() => {
+            setStars(4)
+        }}>4
+        </button>
+        <button onClick={() => {
+            setStars(5)
+        }}>5
+        </button>
         <Star selected={true}/>
         <Star selected={true}/>
         <Star selected={true}/>
-        <Star selected={false}/>
+        <Star selected={true}/>
         <Star selected={false}/>
     </div>
-    if (props.stars === 4) return <div>
+    if (stars === 5) return <div>
         <RatingTitle title1={props.title}/>
-        <Star selected={true}/>
-        <Star selected={true}/>
-        <Star selected={true}/>
-        <Star selected={true}/>
-        <Star selected={false}/>
-    </div>
-    if (props.stars === 5) return <div>
-        <RatingTitle title1={props.title}/>
+        <button onClick={() => {
+            setStars(1)
+        }}>1
+        </button>
+        <button onClick={() => {
+            setStars(2)
+        }}>2
+        </button>
+        <button onClick={() => {
+            setStars(3)
+        }}>3
+        </button>
+        <button onClick={() => {
+            setStars(4)
+        }}>4
+        </button>
+        <button onClick={() => {
+            setStars(5)
+        }}>5
+        </button>
         <Star selected={true}/>
         <Star selected={true}/>
         <Star selected={true}/>
@@ -52,6 +155,26 @@ function Rating(props: RatingPropsType) {
         return (
             <div>
                 <RatingTitle title1={props.title}/>
+                <button onClick={() => {
+                    setStars(1)
+                }}>1
+                </button>
+                <button onClick={() => {
+                    setStars(2)
+                }}>2
+                </button>
+                <button onClick={() => {
+                    setStars(3)
+                }}>3
+                </button>
+                <button onClick={() => {
+                    setStars(4)
+                }}>4
+                </button>
+                <button onClick={() => {
+                    setStars(5)
+                }}>5
+                </button>
                 <Star selected={false}/>
                 <Star selected={false}/>
                 <Star selected={false}/>
@@ -61,6 +184,7 @@ function Rating(props: RatingPropsType) {
         )
     }
 }
+
 export default Rating;
 
 type RatingTitlePropsType = {
