@@ -1,22 +1,32 @@
+import {useState} from 'react';
+
 type AccordionPropsType = {
-    colapsed: boolean;
+    title: string
 }
 
-function Accordion(props: AccordionPropsType) {
-    if (props.colapsed === false) {
-        return (
-            <div>
-                <ul>a</ul>
-                <ul>b</ul>
-                <ul>c</ul>
-            </div>
-        )
+const Accordion = (props: AccordionPropsType) => {
+    let [collapsed, setCollapsed] = useState(true)
+
+    function OnClickButtonHandler() {
+        setCollapsed(!collapsed)
     }
-    else {
-        return (
-            <div></div>
-        )
-    }
+
+    return (
+        <div>
+            <h3 onClick={OnClickButtonHandler}>{props.title}</h3>
+            {collapsed ? <AccordionBody/> : ''}
+        </div>
+    )
 }
 
 export default Accordion;
+
+const AccordionBody = () => {
+    return (
+        <div>
+            <ul>a</ul>
+            <ul>b</ul>
+            <ul>c</ul>
+        </div>
+    )
+}

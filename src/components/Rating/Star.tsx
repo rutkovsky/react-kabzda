@@ -2,15 +2,15 @@ import React from 'react';
 
 type StarPropsType = {
     selected: boolean;
+    setStars: (value: 1 | 2 | 3 | 4| 5) => void
+    value: 1 | 2 | 3 | 4 | 5
 }
 
 function Star(props: StarPropsType) {
-    if (props.selected === true) {
-        return <span><b>STAR </b></span>
-    } else {
-        return <span>STAR </span>
+    function OnClickSpanHandler() {
+        props.setStars(props.value)
     }
-
+    return <span onClick={OnClickSpanHandler}>{props.selected ? <b>star </b> : 'star '}</span>
 }
 
 export default Star;
