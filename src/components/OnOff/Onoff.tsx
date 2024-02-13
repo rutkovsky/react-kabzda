@@ -41,17 +41,3 @@ export const Onoff = () => {
             <div style={indicatorStyle}></div>
         </div>)
 }
-    //
-    // if (props.on) {
-    //     return (
-    //         <div>
-    //             <div style={onStyle}>On</div>
-    //         </div>)
-    // } else {
-    //     return (
-    //         <div>
-    //             <div style={offStyle}>Off</div>
-    //             <div style={indicatorStyle}>Индикатор</div>
-    //         </div>
-    //     )
-    // }
